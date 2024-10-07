@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ADD8E6; /* Color de fondo amarillo claro */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#sensorData {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc; 
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table, .table th, .table td {
+    border: 1px solid #ccc;
+}
+
+.table th, .table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #333;
+    color: white;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e2e2e2; /* Cambia el color de fondo al pasar el ratón */
+}
