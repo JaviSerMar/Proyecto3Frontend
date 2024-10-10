@@ -1,6 +1,20 @@
+
+/**
+ * @brief Función para obtener los datos de los sensores desde el servidor.
+ * 
+ * Esta función realiza una solicitud GET a la API para obtener los datos más
+ * recientes de los sensores de CO2 y temperatura. Luego, actualiza el contenido
+ * del HTML con los valores obtenidos.
+ * 
+ * @async
+ * @throws {Error} Si ocurre un error durante la solicitud fetch.
+ */
+
 // Función para obtener los datos de los sensores
 async function fetchSensorData() {
     try {
+
+        // Realiza una solicitud para obtener los datos de los sensores
         const response = await fetch('http://localhost:13000/latest');
         const data = await response.json();
 
@@ -17,9 +31,16 @@ async function fetchSensorData() {
 
 
 
+/**
+ * @brief Inicializa la obtención de datos de sensores al cargar la ventana.
+ * 
+ * Esta función se ejecuta cuando se carga la ventana del navegador. Llama a
+ * la función `fetchSensorData()` para obtener los datos de sensores y 
+ * establece un intervalo para actualizar los datos cada segundo.
+ */
 window.onload = () => {
     fetchSensorData();
-    setInterval(fetchSensorData, 1000);
+    setInterval(fetchSensorData, 1000); // Actualiza los datos cada 1000 ms (1 segundo)
 }
 
 
