@@ -1,0 +1,59 @@
+\chapter{README del Frontend}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{README del Frontend@{README del Frontend}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Este proyecto incluye una interfaz web simple que muestra los datos de medición de sensores de CO2 y temperatura en tiempo real. Utiliza HTML, CSS y Java\+Script para interactuar con la API del backend.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Estructura de Archivos}{Estructura de Archivos}}\label{md__r_e_a_d_m_e_autotoc_md1}
+El frontend está compuesto por los siguientes archivos\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily index.\+html}\+: Archivo principal de la interfaz que presenta los datos de los sensores.
+\item {\ttfamily css/style.\+css}\+: Estilos para el diseño de la interfaz.
+\item {\ttfamily \doxylink{script_8js}{js/script.\+js}}\+: Lógica de Java\+Script para obtener y mostrar los datos de los sensores desde el servidor.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Descripción de los Archivos}{Descripción de los Archivos}}\label{md__r_e_a_d_m_e_autotoc_md2}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{\texorpdfstring{{\ttfamily index.\+html}}{{\ttfamily index.\+html}}}\label{md__r_e_a_d_m_e_autotoc_md3}
+Este archivo define la estructura de la página web. Contiene\+:
+
+
+\begin{DoxyItemize}
+\item Un encabezado que indica "{}\+Datos de Medición"{}.
+\item Un contenedor para mostrar los valores y las fechas de las últimas mediciones de los sensores de CO2 y temperatura.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{{\ttfamily css/style.\+css}}{{\ttfamily css/style.\+css}}}\label{md__r_e_a_d_m_e_autotoc_md4}
+Este archivo proporciona estilos para el documento HTML. Define\+:
+
+
+\begin{DoxyItemize}
+\item Estilos de fuente y espaciado.
+\item Un color de fondo claro y un contenedor para los datos del sensor con un efecto de sombra.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{{\ttfamily js/script.\+js}}{{\ttfamily js/script.\+js}}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Este archivo maneja la lógica de la aplicación. A continuación se detalla su funcionamiento\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Función {\ttfamily fetch\+Sensor\+Data}\+:}}
+\begin{DoxyItemize}
+\item Realiza una solicitud GET a la API del backend en {\ttfamily \href{http://localhost:13000/latest}{\texttt{ http\+://localhost\+:13000/latest}}} para obtener los datos más recientes de los sensores.
+\item Si la solicitud es exitosa, extrae los datos de CO2 y temperatura de la respuesta JSON.
+\item Actualiza el contenido de los elementos HTML correspondientes con los valores de los sensores y sus marcas de tiempo. Si no hay datos disponibles, muestra "{}\+No data"{}.
+\end{DoxyItemize}
+\item {\bfseries{Inicialización al cargar la ventana\+:}}
+\begin{DoxyItemize}
+\item La función se ejecuta automáticamente cuando se carga la ventana del navegador.
+\item Se establece un intervalo que llama a {\ttfamily fetch\+Sensor\+Data} cada 1000 milisegundos (1 segundo) para actualizar los datos en tiempo real.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+Este enfoque permite que la interfaz se mantenga actualizada con la información más reciente de los sensores, proporcionando una experiencia de usuario fluida y en tiempo real.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Cómo Ejecutar el Frontend}{Cómo Ejecutar el Frontend}}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item Asegúrate de que el backend esté funcionando y accesible en {\ttfamily \href{http://localhost:13000}{\texttt{ http\+://localhost\+:13000}}}.
+\item Abre el archivo {\ttfamily index.\+html} en un navegador web.
+\item Los datos de los sensores se mostrarán y se actualizarán automáticamente cada segundo.
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Requisitos}{Requisitos}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Un navegador web moderno que soporte Java\+Script y CSS.
+\item Conexión al servidor donde está alojado el backend. 
+\end{DoxyItemize}

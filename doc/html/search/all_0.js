@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fetchsensordata_0',['fetchSensorData',['../script_8js.html#a4120694b7ab05f982d809821af92ec92',1,'script.js']]]
+  ['archivos_0',['Archivos',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'Descripción de los Archivos'],['../md__r_e_a_d_m_e.html#autotoc_md1',1,'Estructura de Archivos']]]
 ];
